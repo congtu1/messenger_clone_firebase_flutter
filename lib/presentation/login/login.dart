@@ -18,16 +18,11 @@ class _LoginState extends State<Login> {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Column(
-            children: [
-              TextButton(
-                  onPressed: () async {
-                    loginViewModel.login();
-                  },
-                  child: const Text("Login")),
-              TextButton(onPressed: () async {}, child: const Text("LogOut"))
-            ],
-          ),
+          child: TextButton(
+              onPressed: () async {
+                loginViewModel.login();
+              },
+              child: const Text("Login")),
         ),
       ),
     );

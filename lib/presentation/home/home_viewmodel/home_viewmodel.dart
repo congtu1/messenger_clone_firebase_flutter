@@ -42,6 +42,9 @@ Future<void> fetchCurrentUser() async {
   currentUserDetail = authRepository.getCurrentUserDetail;
   notifyListeners();
 }
+Future<void> logout() async {
+  authRepository.logOut();
+}
   /// tab
 void goToTab(index) {
   selectedTab = index;

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:messenger_clone/common/injector/injector.dart';
 import 'package:messenger_clone/data/repositories/auth_repository.dart';
+import 'package:messenger_clone/presentation/profile/view/profile_page.dart';
 
 import 'package:provider/provider.dart';
 
@@ -68,9 +69,14 @@ class _HomeState extends State<Home> {
             elevation: 0.0,
             leading: Padding(
               child: ClipOval(
-                child: Image.network(
-                  authRepo.currentU!.photo.toString(),
-                  fit: BoxFit.cover,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (_) => Profile()));
+                  },
+                  child: Image.network(
+                    authRepo.currentU!.photo.toString(),
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 clipBehavior: Clip.antiAlias,
               ),
