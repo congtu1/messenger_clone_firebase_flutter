@@ -4,7 +4,6 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:image_picker/image_picker.dart';
 
 abstract class FirebaseQuery {
 
@@ -12,7 +11,7 @@ abstract class FirebaseQuery {
   Future<QuerySnapshot> getUserInfo(String id);
   Future<QuerySnapshot> getUserByUserUID(String uid);
   Future<Stream<QuerySnapshot>> getConversationMessages(idConversation);
-  Future<Stream<QuerySnapshot>> getMyConversation();
+  Future<Stream<QuerySnapshot>> getMyConversation(id);
   Future<QuerySnapshot> getConversationById(idConversation);
   Future<QuerySnapshot> getAllUser();
   Future<DocumentReference> createNewConversation(conversation);
