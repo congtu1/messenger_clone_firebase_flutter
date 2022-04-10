@@ -1,6 +1,9 @@
 # messenger_clone
 
-A new Flutter application.
+Project using :
+  + Bloc
+  + Firebase
+  + Clean Architecture
 
 ## Getting Started
 
